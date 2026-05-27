@@ -1,0 +1,24 @@
+info:
+  name: Actualizar
+  type: http
+  seq: 9
+
+http:
+  method: PUT
+  url: http://localhost:8080/api/vuelos/2
+  body:
+    type: json
+    data: |-
+      {
+        "codigo": "NY-777",
+        "precioBoleto": 980,
+        "asientosDisponibles": 20,
+        "destino": "Nueva York"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,24 @@
+info:
+  name: Agregar Vuelos
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:8080/api/vuelos
+  body:
+    type: json
+    data: |-
+      {
+        "codigo": "TK-900",
+        "precioBoleto": 1200,
+        "asientosDisponibles": 15,
+        "destino": "Tokio"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
